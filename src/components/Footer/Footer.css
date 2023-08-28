@@ -1,0 +1,23 @@
+.footer {
+  color: var(--yellow);
+  background-color: var(--black);
+}
+
+.footer .social {
+  border: 2px solid var(--yellow);
+  color: var(--yellow);
+}
+
+.footer .social {
+  padding: 2px;
+  transition: .2s all ease;
+}
+.footer .social:hover {
+  border: 2px dashed var(--red);
+}
+
+.footer li:hover {
+  color: var(--red);
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+}

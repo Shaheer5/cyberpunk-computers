@@ -1,0 +1,25 @@
+:root {
+  --red: #fd2238;
+  --dark-red: #db0d15;
+  --yellow: #fcee0a;
+  --cyan: #00f0ff;
+  --black: #000;
+}
+
+@font-face {
+  font-family: BlenderBold700;
+  font-weight: 700;
+  src: url(./fonts/BlenderPro-Bold.woff);
+}
+
+@font-face {
+  font-family: BlenderBook400;
+  font-weight: 400;
+  src: url(./fonts/BlenderPro-Book.woff);
+}
+
+@font-face {
+  font-family: RefineryBold700;
+  font-weight: 400;
+  src: url(./fonts/refinery-25-bold.ttf);
+}
