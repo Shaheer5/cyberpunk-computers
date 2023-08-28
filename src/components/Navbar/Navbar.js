@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-redundant-roles */
 
 import { Link } from 'react-router-dom';
 // styles 

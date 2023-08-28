@@ -26,7 +26,7 @@ const products = [
     color: 'Black',
   },
   {
-    id: 1,
+    id: 2,
     name: 'Basic Tee',
     to: '/ProductDetail',
     imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
