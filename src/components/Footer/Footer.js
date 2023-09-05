@@ -33,7 +33,7 @@ const Footer = () => {
               </Link>
             </li>
             <li className="font-titleFont text-base hover:underline decoration-[1px] underline-offset-2 cursor-pointer duration-300">
-              <Link to="/error404">
+              <Link to="/contact">
                 Contact
               </Link>
             </li>
@@ -43,7 +43,7 @@ const Footer = () => {
               </Link>
             </li>
             <li className="font-titleFont text-base hover:underline decoration-[1px] underline-offset-2 cursor-pointer duration-300">
-              <Link to="/error404">
+              <Link to="/privacy-policy">
                 Policies
               </Link>
             </li>
@@ -87,7 +87,7 @@ const Footer = () => {
         <div className="col-span-2 flex flex-col justify-center w-full px-4">
           <ul className="flex justify-center gap-2 py-10">
             <a
-              href="https://www.youtube.com/@reactjsBD"
+              href="https://www.youtube.com/channel/UCDXk8nZZbULooIxVTYUBCYQ"
               target="_blank"
               rel="noreferrer"
             >
@@ -96,7 +96,7 @@ const Footer = () => {
               </li>
             </a>
             <a
-              href="https://github.com/noorjsdivs"
+              href="https://github.com/Shaheer5"
               target="_blank"
               rel="noreferrer"
             >
@@ -105,7 +105,7 @@ const Footer = () => {
               </li>
             </a>
             <a
-              href="https://www.facebook.com/Noorlalu143/"
+              href="https://www.facebook.com/shaheer.mansoor.35/"
               target="_blank"
               rel="noreferrer"
             >
@@ -114,7 +114,7 @@ const Footer = () => {
               </li>
             </a>
             <a
-              href="https://www.linkedin.com/in/noor-mohammad-ab2245193/"
+              href="https://www.linkedin.com/in/shaheer-mansoor-2092631a6/"
               target="_blank"
               rel="noreferrer"
             >

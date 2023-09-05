@@ -17,24 +17,3 @@
 .error-page p {
   color: var(--yellow);
 }
-
-.cp-btn-yellow {
-  border-image: url(../../../public/assets/images/cp-btn-yellow.svg) 0 20 fill;
-  color: var(--yellow);
-}
-
-.cp-btn {
-  align-items: center;
-  border-style: solid;
-  border-width: 0 20px;
-  cursor: pointer;
-  display: inline-flex;
-  height: 48px;
-  justify-content: center;
-  min-width: 200px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  user-select: none;
-  font-size: 20px;
-}
