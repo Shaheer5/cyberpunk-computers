@@ -15,6 +15,13 @@ const Navbar = () => {
     { name: "CONTACT", to: "/contact" },
   ];
   const [open, setOpen] = useState(false);
+
+  const closeNavbar = () => {
+    setTimeout(() => {
+      setOpen(false);
+    }, 200);
+  };
+
   const handleSearch = (e) => {
     e.preventDefault();
     alert('just checking the working of Search Button')
@@ -31,7 +38,7 @@ const Navbar = () => {
 
         <div onClick={() => setOpen(!open)} className="text-2xl absolute right-2 top-3 cursor-pointer lg:hidden">
           {!open ? (
-            <IoMenuOutline name={open ? "close" : "menu"}></IoMenuOutline>
+            <IoMenuOutline name={open ? "open" : "menu"}></IoMenuOutline>
           ) : (
             <IoCloseOutline name={open ? "close" : "menu"}></IoCloseOutline>
           )}
@@ -53,10 +60,10 @@ const Navbar = () => {
         </div>
 
         <ul className={`lg:flex lg:items-center lg:pb-0 fixed lg:static bg-white lg:z-0 xs:z-100 left-0 w-full h-full lg:w-auto lg:pl-0 pl-4 transition-all duration-500 ease-in font-blender700 ${open ? "top-12 " : "top-[-1400px]"}`}>
-          {
+          { open &&
             Links.map((link) => (
               <li key={link.name} className="lg:ml-8 2xl:text-2xl xl:text-ms lg:text-sm lg:my-0 my-6">
-                <Link to={link.to} className="text-gray-800 hover:text-gray-400 duration-500">{link.name}</Link>
+                <Link to={link.to} onClick={closeNavbar} className="text-gray-800 hover:text-gray-400 duration-500">{link.name}</Link>
               </li>
             ))
           }
