@@ -7,13 +7,6 @@ import './Navbar.css'
 
 const Navbar = () => {
 
-  const Links = [
-    { name: "HOME", to: "/" },
-    { name: "SHOP", to: "/" },
-    { name: "ABOUT", to: "/about" },
-    { name: "POLICIES", to: "/privacy-policy" },
-    { name: "CONTACT", to: "/contact" },
-  ];
   const [open, setOpen] = useState(false);
 
   const closeNavbar = () => {
@@ -38,7 +31,7 @@ const Navbar = () => {
 
         <div onClick={() => setOpen(!open)} className="text-2xl absolute right-2 top-3 cursor-pointer lg:hidden">
           {!open ? (
-            <IoMenuOutline name={open ? "open" : "menu"}></IoMenuOutline>
+            <IoMenuOutline name={open ? "close" : "menu"}></IoMenuOutline>
           ) : (
             <IoCloseOutline name={open ? "close" : "menu"}></IoCloseOutline>
           )}
@@ -60,13 +53,22 @@ const Navbar = () => {
         </div>
 
         <ul className={`lg:flex lg:items-center lg:pb-0 fixed lg:static bg-white lg:z-0 xs:z-100 left-0 w-full h-full lg:w-auto lg:pl-0 pl-4 transition-all duration-500 ease-in font-blender700 ${open ? "top-12 " : "top-[-1400px]"}`}>
-          { open &&
-            Links.map((link) => (
-              <li key={link.name} className="lg:ml-8 2xl:text-2xl xl:text-ms lg:text-sm lg:my-0 my-6">
-                <Link to={link.to} onClick={closeNavbar} className="text-gray-800 hover:text-gray-400 duration-500">{link.name}</Link>
+              <li key='home' className="lg:ml-8 2xl:text-2xl xl:text-lg lg:text-md lg:my-0 my-6">
+                <Link to='/' onClick={closeNavbar} className="text-gray-800 hover:text-gray-400 duration-500">Home</Link>
               </li>
-            ))
-          }
+              <li key='shop' className="lg:ml-8 2xl:text-2xl xl:text-lg lg:text-md lg:my-0 my-6">
+                <Link to='/shop' onClick={closeNavbar} className="text-gray-800 hover:text-gray-400 duration-500">Shop</Link>
+              </li>
+              <li key='about' className="lg:ml-8 2xl:text-2xl xl:text-ms lg:text-md lg:my-0 my-6">
+                <Link to='/about' onClick={closeNavbar} className="text-gray-800 hover:text-gray-400 duration-500">About</Link>
+              </li>
+              <li key='policy' className="lg:ml-8 2xl:text-2xl xl:text-lg lg:text-md lg:my-0 my-6">
+                <Link to='/privacy-policy' onClick={closeNavbar} className="text-gray-800 hover:text-gray-400 duration-500">Policies</Link>
+              </li>
+              <li key='contact' className="lg:ml-8 2xl:text-2xl xl:text-lg lg:text-md lg:my-0 my-6">
+                <Link to='/contact' onClick={closeNavbar} className="text-gray-800 hover:text-gray-400 duration-500">Contact</Link>
+              </li>
+
           <button className="md:ml-8 cp-btn cp-btn-yellow">
             Get Started
           </button>
