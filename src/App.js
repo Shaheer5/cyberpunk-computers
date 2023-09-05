@@ -7,7 +7,6 @@ import About from './pages/about/About';
 import Error404 from './pages/errorPages/Error404';
 import Contact from './pages/contact/Contact'
 import Navbar from './components/Navbar/Navbar';
-import Navbar2 from './components/Navbar/Navbar';
 import ProfileEdit from './pages/profileEdit/ProfileEdit';
 import PrivacyPolicy from './pages/privacyPolicy/PrivacyPolicy';
 import WarrantyPolicy from './pages/warrantyPolicy/WarrantyPolicy';
@@ -22,8 +21,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      {/* <Navbar /> */}
-      <Navbar2 />
+      <Navbar />
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/about' element={<About />}/>

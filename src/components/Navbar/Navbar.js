@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { IoMenuOutline, IoCloseOutline, IoSearchOutline } from "react-icons/io5";
 
 // styles
-import './Navbar2.css'
+import './Navbar.css'
 
 const Navbar = () => {
 
