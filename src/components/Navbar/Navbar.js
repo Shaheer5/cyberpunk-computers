@@ -21,7 +21,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar shadow-md w-full lg:relative xs:fixed z-1">
+    <div className="navbar shadow-md w-full lg:relative xs:fixed z-10">
       <div className="xs:flex items-center xs:justify-around md:justify-between xs:items-center text-center bg-white 2xl:py-3 py-2 lg:px-10 md:px-6 sm:px-4 xs:px-2">
         <div className="lg:w-32 xl:w-48 2xl:w-64 md:w-24 sm:w-24 xs:w-20 absolute xs:static xs:left-2 xs:top-3 ">
           <Link to="/">
