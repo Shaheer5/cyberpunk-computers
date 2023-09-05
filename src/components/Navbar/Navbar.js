@@ -8,16 +8,16 @@ import './Navbar.css'
 const Navbar = () => {
 
   const Links = [
-    { name: "HOME", link: "/" },
-    { name: "SHOP", link: "/" },
-    { name: "ABOUT", link: "/about" },
-    { name: "POLICIES", link: "/privacy-policy" },
-    { name: "CONTACT", link: "/contact" },
+    { name: "HOME", to: "/" },
+    { name: "SHOP", to: "/" },
+    { name: "ABOUT", to: "/about" },
+    { name: "POLICIES", to: "/privacy-policy" },
+    { name: "CONTACT", to: "/contact" },
   ];
   const [open, setOpen] = useState(false);
   const handleSearch = (e) => {
     e.preventDefault();
-    alert('Phull Heavy')
+    alert('just checking the working of Search Button')
   }
 
   return (
@@ -56,7 +56,7 @@ const Navbar = () => {
           {
             Links.map((link) => (
               <li key={link.name} className="lg:ml-8 2xl:text-2xl xl:text-ms lg:text-sm lg:my-0 my-6">
-                <a href={link.link} className="text-gray-800 hover:text-gray-400 duration-500">{link.name}</a>
+                <Link to={link.to} className="text-gray-800 hover:text-gray-400 duration-500">{link.name}</Link>
               </li>
             ))
           }
