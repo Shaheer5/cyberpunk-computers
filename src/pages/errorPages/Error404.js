@@ -19,12 +19,9 @@ export default function Example() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
               to="/"
-              className="cp-btn cp-btn-yellow 2xl:text-8xl font-blender700"
+              className="cp-btn cp-btn-yellow 2xl:text-8xl"
             >
               Go back home
-            </Link>
-            <Link to="/" className="cp-btn cp-btn-yellow font-blender700">
-              Contact support <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
         </div>

@@ -19,7 +19,8 @@ export default function Newsletter() {
       .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
   };
 
-  const handleSubscription = () => {
+  const handleSubscription = (e) => {
+    e.preventDefault()
     if (emailInfo === "") {
       setErrMsg("Please provide an Email !");
     } else if (!emailValidation(emailInfo)) {
@@ -31,11 +32,12 @@ export default function Newsletter() {
     }
   };
 
+
   return (
     <div>
       <div className="section-razor font-blender400">
-          __ /// PRODUCT.MODULE
-          <br />
+        __ /// PRODUCT.MODULE
+        <br />
       </div>
       <div className="newsletter relative isolate overflow-hidden newsletter-bg py-16 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -45,7 +47,7 @@ export default function Newsletter() {
               <p className="mt-4 text-lg leading-8 text-gray-900">
                 Be the first to get updates on Cyberpunk Computers and the upcoming Pnomotions and Sales — delivered directly to your inbox!
               </p>
-              <div className="mt-6 flex max-w-md gap-x-4">
+              <form className="mt-6 flex max-w-md gap-x-4">
                 <label htmlFor="email-address" className="sr-only">
                   Email address
                 </label>
@@ -54,26 +56,27 @@ export default function Newsletter() {
                     initial={{ x: 20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="w-full text-center text-base font-titleFont font-semibold text-green-600"
+                    className="w-full text-center font-extrabold text-xl text-cyan"
                   >
-                    Subscribed Successfully !
+                    Subscribed Successfully!
                   </motion.p>
                 ) : (
                   <div className="w-full flex-col xl:flex-row flex justify-center items-start gap-4">
                     <div className="flex flex-col w-full">
                       <input
                         onChange={(e) => setEmailInfo(e.target.value)}
+                        // onChange={setEmailInfo}
                         value={emailInfo}
+                        // value={email}
                         id="email-address"
                         name="email"
                         type="email"
                         autoComplete="email"
-                        required
                         className="min-w-0 flex-auto rounded-md border-0 px-3.5 py-1.5 sm:text-sm sm:leading-6"
                         placeholder="Enter your email"
                       />
                       {errMsg && (
-                        <p className="text-red-600 text-sm font-semibold font-titleFont text-center animate-bounce mt-2">
+                        <p className="text-red text-sm font-semibold font-titleFont text-center animate-bounce mt-2">
                           {errMsg}
                         </p>
                       )}
@@ -81,13 +84,13 @@ export default function Newsletter() {
                     <button
                       onClick={handleSubscription}
                       type="submit"
-                      className="cp-btn cp-btn-cyan font-blender700"
+                      className="cp-btn cp-btn-cyan text-lg font-blender700"
                     >
                       Subscribe
                     </button>
                   </div>
                 )}
-              </div>
+              </form>
             </div>
             <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
               <div className="flex flex-col items-start">

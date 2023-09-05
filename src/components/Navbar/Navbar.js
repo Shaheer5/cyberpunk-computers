@@ -102,8 +102,8 @@ const navigation = {
       ],
       sections: [
         {
-          id: 'clothing',
-          name: 'Clothing',
+          id: 'gpus',
+          name: 'GPUs',
           items: [
             { name: 'Tops', to: '/' },
             { name: 'Pants', to: '/' },
@@ -115,8 +115,8 @@ const navigation = {
           ],
         },
         {
-          id: 'accessories',
-          name: 'Accessories',
+          id: 'cpus',
+          name: 'CPUs',
           items: [
             { name: 'Watches', to: '/' },
             { name: 'Wallets', to: '/' },
@@ -127,8 +127,8 @@ const navigation = {
           ],
         },
         {
-          id: 'brands',
-          name: 'Brands',
+          id: 'motherboards',
+          name: 'Motherboards',
           items: [
             { name: 'Re-Arranged', to: '/' },
             { name: 'Counterfeit', to: '/' },
@@ -142,7 +142,7 @@ const navigation = {
   pages: [
     { name: 'Home', to: '/' },
     { name: 'Company', to: '/' },
-    { name: 'Stores', to: '/' },
+    { name: 'Contact Us', to: '/contact' },
   ],
 }
 
@@ -167,7 +167,7 @@ export default function Example() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-25" />
+            <div className="fixed inset-0 -bg--white " />
           </Transition.Child>
 
           <div className="fixed inset-0 z-40 flex">
@@ -268,19 +268,19 @@ export default function Example() {
 
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   <div className="flow-root">
-                    <Link to="#" className="-m-2 block p-2 font-medium text-gray-900">
+                    <Link to="/profile-page" className="-m-2 block p-2 font-medium text-gray-900">
                       Sign in
                     </Link>
                   </div>
                   <div className="flow-root">
-                    <Link to="#" className="-m-2 block p-2 font-medium text-gray-900">
+                    <Link to="/profile-page" className="-m-2 block p-2 font-medium text-gray-900">
                       Create account
                     </Link>
                   </div>
                 </div>
 
                 <div className="border-t border-gray-200 px-4 py-6">
-                  <Link to="#" className="-m-2 flex items-center p-2">
+                  <Link to="/" className="-m-2 flex items-center p-2">
                     <img
                       src="https://tailwindui.com/img/flags/flag-canada.svg"
                       alt=""
@@ -297,11 +297,8 @@ export default function Example() {
       </Transition.Root>
 
       <header className="relative bg-white">
-        <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Get free delivery on orders over PKR 4,999
-        </p>
 
-        <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -bg--">
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center">
               <button
@@ -355,14 +352,16 @@ export default function Example() {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                           >
-                            <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500">
+                            <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500 -bg--yellow">
                               {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                               <div className="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
 
                               <div className="relative bg-white">
                                 <div className="mx-auto max-w-7xl px-8">
                                   <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
-                                    <div className="col-start-2 grid grid-cols-2 gap-x-8">
+
+                                    {/* features images in navbar */}
+                                    {/* <div className="col-start-2 grid grid-cols-2 gap-x-8">
                                       {category.featured.map((item) => (
                                         <div key={item.name} className="group relative text-base sm:text-sm">
                                           <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
@@ -381,7 +380,8 @@ export default function Example() {
                                           </p>
                                         </div>
                                       ))}
-                                    </div>
+                                    </div> */}
+
                                     <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
                                       {category.sections.map((section) => (
                                         <div key={section.name}>
@@ -428,17 +428,18 @@ export default function Example() {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <Link to="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                  <Link to="/profile-edit" className="text-sm font-medium text-gray-700 hover:text-gray-800">
                     Sign in
                   </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <Link to="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                  <Link to="/profile-edit" className="text-sm font-medium text-gray-700 hover:text-gray-800">
                     Create account
                   </Link>
                 </div>
 
-                <div className="hidden lg:ml-8 lg:flex">
-                  <Link to="#" className="flex items-center text-gray-700 hover:text-gray-800">
+                  {/* curreny */}
+                {/* <div className="hidden lg:ml-8 lg:flex">
+                  <Link to="/" className="flex items-center text-gray-700 hover:text-gray-800">
                     <img
                       src="https://tailwindui.com/img/flags/flag-canada.svg"
                       alt=""
@@ -447,11 +448,11 @@ export default function Example() {
                     <span className="ml-3 block text-sm font-medium">CAD</span>
                     <span className="sr-only">, change currency</span>
                   </Link>
-                </div>
+                </div> */}
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
-                  <Link to="#" className="p-2 text-gray-400 hover:text-gray-500">
+                  <Link to="/" className="p-2 text-gray-400 hover:text-gray-500">
                     <span className="sr-only">Search</span>
                     <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
                   </Link>
@@ -459,7 +460,7 @@ export default function Example() {
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <Link to="#" className="group -m-2 flex items-center p-2">
+                  <Link to="/" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                       aria-hidden="true"

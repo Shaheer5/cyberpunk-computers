@@ -5,10 +5,12 @@
 .newsletter p {
   font-family: BlenderBook400;
 }
+
 .newsletter dt {
   font-family: RefineryBold700;
   color: var(--black);
 }
+
 .newsletter dd {
   text-align: start;
 }
@@ -17,6 +19,7 @@
   font-family: BlenderBook400;
   color: var(--black);
 }
+
 .newsletter input {
   font-family: BlenderBold700;
   color: var(--black);
@@ -24,15 +27,19 @@
   outline: none;
   border: 4px solid white;
 }
+
 .newsletter input:valid {
   border: 4px solid var(--cyan);
 }
+
 .newsletter input:invalid {
   border: 4px solid var(--red);
 }
+
 .newsletter input::placeholder {
   color: var(--red);
 }
+
 .bg-red {
   background-color: var(--red);
 }
@@ -50,23 +57,11 @@
   color: #fcee0a;
 }
 
-.cp-btn-cyan {
-  border-image: url(../../../public/assets/images/cp-btn-cyan.svg) 0 20 fill;
-  color: var(--cyan);
+.newsletter .cp-btn[type=submit]:disabled {
+  cursor: default;
+  opacity: .50;
 }
 
 .cp-btn {
-  align-items: center;
-  border-style: solid;
-  border-width: 0 20px;
-  cursor: pointer;
-  display: inline-flex;
-  height: 48px;
-  justify-content: center;
   min-width: 200px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  user-select: none;
-  font-size: 20px;
 }

@@ -2,9 +2,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 // pages
-import Home from './pages/home/Home';
+import Home from './pages/home/home';
 import About from './pages/about/About';
 import Error404 from './pages/errorPages/Error404';
+import Contact from './pages/contact/Contact'
+import Navbar from './components/Navbar/Navbar';
+import Navbar2 from './components/Navbar/Navbar2';
+import ProfileEdit from './pages/profileEdit/ProfileEdit';
+import PrivacyPolicy from './pages/privacyPolicy/PrivacyPolicy';
+import WarrantyPolicy from './pages/warrantyPolicy/WarrantyPolicy';
 
 //  components
 // import Navbar from './components/Navbar/Navbar'
@@ -17,10 +23,15 @@ function App() {
     <div className="App">
       <BrowserRouter>
       {/* <Navbar /> */}
+      <Navbar2 />
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/about' element={<About />}/>
         <Route path='/error404' element={<Error404 />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/profile-edit' element={<ProfileEdit />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+        <Route path='/warranty-policy' element={<WarrantyPolicy />} />
       </Routes>
       </BrowserRouter>
     </div>
