@@ -35,3 +35,7 @@
 .contact button {
   font-size: 24px;
 }
+
+.contact button:disabled {
+  opacity: .5;
+}
