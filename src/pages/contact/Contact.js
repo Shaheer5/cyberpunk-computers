@@ -1,8 +1,8 @@
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 // import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs'
 
 // styles
