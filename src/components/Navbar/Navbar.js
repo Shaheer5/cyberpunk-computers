@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom";
+import { toast } from 'react-toastify';
 import { IoMenuOutline, IoCloseOutline, IoSearchOutline } from "react-icons/io5";
 
 // styles
@@ -17,7 +18,7 @@ const Navbar = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    alert('just checking the working of Search Button')
+    toast.success('just checking search button', {autoClose: 2000});
   }
 
   return (

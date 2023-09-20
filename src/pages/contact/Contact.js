@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 // import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
 import { Link, useLocation } from 'react-router-dom'
-import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs'
+// import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs'
 
 // styles
 import './Contact.css'
@@ -14,13 +14,13 @@ function classNames(...classes) {
 
 export default function Example() {
 
-  const location = useLocation();
-  const [prevLocation, setPrevLocation] = useState("");
-  useEffect(() => {
-    if (location.state?.data) {
-      setPrevLocation(location.state.data);
-    }
-  }, [location]);
+  // const location = useLocation();
+  // const [prevLocation, setPrevLocation] = useState("");
+  // useEffect(() => {
+  //   if (location.state?.data) {
+  //     setPrevLocation(location.state.data);
+  //   }
+  // }, [location]);
 
   const [agreed, setAgreed] = useState(false);
 
@@ -41,7 +41,7 @@ export default function Example() {
 
   return (
     <React.Fragment>
-      <Breadcrumbs prevLocation={prevLocation} />
+      {/* <Breadcrumbs prevLocation={prevLocation} /> */}
       <div className="contact isolate px-6 md:py-16 xs:py-32 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight font-refinery700 sm:text-4xl">Email Us</h2>

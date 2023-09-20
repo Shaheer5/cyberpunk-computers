@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 // pages
@@ -21,16 +23,17 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path='/about' element={<About />}/>
-        <Route path='/error404' element={<Error404 />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/profile-edit' element={<ProfileEdit />} />
-        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
-        <Route path='/warranty-policy' element={<WarrantyPolicy />} />
-      </Routes>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/error404' element={<Error404 />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/profile-edit' element={<ProfileEdit />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+          <Route path='/warranty-policy' element={<WarrantyPolicy />} />
+        </Routes>
+        <ToastContainer />
       </BrowserRouter>
     </div>
   );

@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
+// import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 
 // styles
 import './WarrantyPolicy.css'
 
 function WarrantyPolicy() {
   
-  const location = useLocation();
-  const [prevLocation, setPrevLocation] = useState("");
-  useEffect(() => {
-    if (location.state?.data) {
-      setPrevLocation(location.state.data);
-    }
-  }, [location]);
+  // const location = useLocation();
+  // const [prevLocation, setPrevLocation] = useState("");
+  // useEffect(() => {
+  //   if (location.state?.data) {
+  //     setPrevLocation(location.state.data);
+  //   }
+  // }, [location]);
 
   return (
     <React.Fragment>
-      <Breadcrumbs prevLocation={prevLocation} />
+      {/* <Breadcrumbs prevLocation={prevLocation} /> */}
       <div className="warranty-policy py-8 px-4 -bg--yellow flex flex-col justify-center items-center">
         <div className="max-w-screen-2xl xs:mt-8 lg:mt-0 -bg--white shadow-md p-6 rounded-md">
           <h1 className="text-2xl mb-4 font-refinery700">Warranty Policy</h1>
