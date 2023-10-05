@@ -1,0 +1,14 @@
+.product-overview .product-image {
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.product-overview li {
+  font-family: BlenderBook400;
+  list-style-type: disc;
+}
+
+.product-overview span {
+  font-family: BlenderBook400;
+  font-size: 18px;
+}

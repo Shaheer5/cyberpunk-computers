@@ -1,7 +1,10 @@
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// components
+import Preloader from './components/elements/Preloader';
 
 // pages
 import Home from './pages/home/Home';
@@ -20,22 +23,43 @@ import WarrantyPolicy from './pages/warrantyPolicy/WarrantyPolicy';
 import './App.css';
 
 function App() {
+
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    // new WOW.WOW({
+    //     live: false
+    //   }).init()
+  }, []);
+
+
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/error404' element={<Error404 />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/profile-edit' element={<ProfileEdit />} />
-          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
-          <Route path='/warranty-policy' element={<WarrantyPolicy />} />
-        </Routes>
-        <ToastContainer />
-      </BrowserRouter>
-    </div>
+    <React.Fragment>
+      {!loading ? (
+        <div className="App">
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/error404' element={<Error404 />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/profile-edit' element={<ProfileEdit />} />
+              <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+              <Route path='/warranty-policy' element={<WarrantyPolicy />} />
+            </Routes>
+            <ToastContainer />
+          </BrowserRouter>
+        </div>) : (
+        <Preloader />
+      )
+      }
+    </React.Fragment>
+
   );
 }
 

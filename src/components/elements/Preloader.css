@@ -1,0 +1,31 @@
+/* Preloader.css */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../public/assets/bg-images/cp-city-bg.jpg'); /* Replace with your background image URL */
+  background-size: cover;
+  background-position: center;
+}
+
+/* #preloader .bg-img {
+  filter: invert(70%);
+} */
+
+/* Center the logo image */
+#preloader .w-72 {
+  max-width: 18rem; /* Adjust the maximum width as needed */
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Style the logo image */
+#preloader .w-72 img {
+  max-width: 100%;
+  height: auto;
+}

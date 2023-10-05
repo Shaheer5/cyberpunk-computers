@@ -1,8 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --red: #fd2238;
   --dark-red: #db0d15;
   --yellow: #fcee0a;
+  --darkyellow: #eade00;
   --cyan: #00f0ff;
+  --darkcyan: #03d3e1;
   --black: #000;
   --white: #fff;
   --grey: #aaaaaa;
