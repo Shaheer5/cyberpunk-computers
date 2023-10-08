@@ -6,18 +6,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../../../public/assets/bg-images/cp-city-bg.jpg'); /* Replace with your background image URL */
+  background-image: url('../../../public/assets/bg-images/cp-city-bg.jpg');
   background-size: cover;
   background-position: center;
 }
 
-/* #preloader .bg-img {
-  filter: invert(70%);
-} */
-
-/* Center the logo image */
 #preloader .w-72 {
-  max-width: 18rem; /* Adjust the maximum width as needed */
+  max-width: 18rem;
   margin: 0 auto;
   position: relative;
   top: 50%;

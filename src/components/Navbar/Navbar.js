@@ -69,6 +69,9 @@ const Navbar = () => {
               <li key='contact' className="lg:ml-8 2xl:text-2xl xl:text-lg lg:text-md lg:my-0 my-6">
                 <Link to='/contact' onClick={closeNavbar} className="text-gray-800 hover:text-gray-400 duration-500">Contact</Link>
               </li>
+              <li key='faqs' className="lg:ml-8 2xl:text-2xl xl:text-lg lg:text-md lg:my-0 my-6">
+                <Link to='/faqs' onClick={closeNavbar} className="text-gray-800 hover:text-gray-400 duration-500">FAQs</Link>
+              </li>
 
           <button className="md:ml-8 cp-btn cp-btn-yellow">
             Get Started

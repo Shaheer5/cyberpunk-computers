@@ -1,0 +1,21 @@
+#FAQs {
+  position: relative;
+}
+#FAQs img{
+  width: 100%;
+}
+
+#FAQs #accordion {
+  position: absolute;
+  top: 10%;
+  backdrop-filter: blur(4px);
+  text-align: left;
+}
+.accordion-block {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+#accordion .icons {
+  position: absolute;
+  right: 5%;
+}

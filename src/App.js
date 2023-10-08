@@ -15,6 +15,7 @@ import Navbar from './components/Navbar/Navbar';
 import ProfileEdit from './pages/profileEdit/ProfileEdit';
 import PrivacyPolicy from './pages/privacyPolicy/PrivacyPolicy';
 import WarrantyPolicy from './pages/warrantyPolicy/WarrantyPolicy';
+import FAQs from './pages/faqs/FAQs';
 
 //  components
 // import Navbar from './components/Navbar/Navbar'
@@ -51,6 +52,7 @@ function App() {
               <Route path='/profile-edit' element={<ProfileEdit />} />
               <Route path='/privacy-policy' element={<PrivacyPolicy />} />
               <Route path='/warranty-policy' element={<WarrantyPolicy />} />
+              <Route path='/faqs' element={<FAQs />} />
             </Routes>
             <ToastContainer />
           </BrowserRouter>
