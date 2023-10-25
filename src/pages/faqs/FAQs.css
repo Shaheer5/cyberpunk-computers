@@ -1,9 +1,6 @@
 #FAQs {
   position: relative;
 }
-#FAQs img{
-  width: 100%;
-}
 
 #FAQs #accordion {
   position: absolute;

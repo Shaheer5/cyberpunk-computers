@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -42,7 +42,7 @@ function App() {
     <React.Fragment>
       {!loading ? (
         <div className="App">
-          <BrowserRouter>
+          <Router>
             <Navbar />
             <Routes>
               <Route path='/' element={<Home />} />
@@ -55,7 +55,7 @@ function App() {
               <Route path='/faqs' element={<FAQs />} />
             </Routes>
             <ToastContainer />
-          </BrowserRouter>
+          </Router>
         </div>) : (
         <Preloader />
       )
